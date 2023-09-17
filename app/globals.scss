@@ -1,0 +1,25 @@
+@use "@carbon/react";
+@use "@carbon/themes/scss/themes";
+@use "@carbon/themes/scss/theme";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+body {
+  @include theme.theme(themes.$white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  body {
+    @include theme.theme(themes.$g100);
+  }
+}
+
+@layer base {
+  .btn--primary {
+    @apply bg-blue-60;
+  }
+}
